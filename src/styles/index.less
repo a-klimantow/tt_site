@@ -1,0 +1,48 @@
+@import "reset.css";
+@import "fonts.css";
+@import "const";
+@import "topMenu";
+@import "footerMenu";
+@import "tabs";
+@import "browser";
+@import "atoms";
+@import "modal";
+@import "header";
+@import "footer";
+@import "about";
+@import "versionsHistory";
+@import "contacts";
+@import "main";
+
+* {
+	font-family: PTRootUIWebRegular, Helvetica, sans-serif;
+}
+
+body {
+	background-color: #fff;
+}
+
+.content {
+	width: 1200px;
+	margin: -320px auto 0 auto;
+	z-index: 100;
+	transform: translateX(0);
+
+	@media screen and (max-width: 1500px) {
+		margin-top: -253px;
+	}
+
+	@media screen and (max-width: @lg) {
+		width: auto;
+		padding: 24px 24px 0;
+		margin-top: -212px;
+	}
+
+	@media screen and (max-width: @sm) {
+		margin-top: -324px;
+	}
+
+	@media screen and (max-width: @xs) {
+		margin-top: -188px;
+	}
+}

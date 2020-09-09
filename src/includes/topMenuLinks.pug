@@ -1,0 +1,15 @@
+mixin topMenuLinks(currentPage, hasActive=true)
+	if hasActive && currentPage === "about"
+		span.top-menu__link.top-menu__link_active О компании
+	else
+		a.top-menu__link(href="/about.html") О компании
+
+	if hasActive && currentPage === "versions-history"
+		span.top-menu__link.top-menu__link_active История изменений системы
+	else
+		a.top-menu__link(href="/versions-history.html") История изменений системы
+
+	if hasActive && currentPage === "contacts"
+		span.top-menu__link.top-menu__link_active Контакты
+	else
+		a.top-menu__link(href="/contacts.html") Контакты

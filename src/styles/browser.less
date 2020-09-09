@@ -1,0 +1,92 @@
+@import "const";
+
+.browser {
+	border: 1px solid #42A4F5;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding-bottom: 4px;
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		padding: 16px 12px;
+		box-sizing: border-box;
+	}
+
+	&__control {
+		display: block;
+		flex-shrink: 0;
+	}
+
+	&__url {
+		flex-shrink: 1;
+		width: 100%;
+		height: 32px;
+		margin: 0 20px;
+		background: rgba(39, 47, 90, 0.65);
+		border-radius: 40px;
+	}
+
+	&__content {
+		border-top: 1px solid #42A4F5;
+		border-bottom: 1px solid #42A4F5;
+	}
+
+	&__item {
+		position: relative;
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+
+	&__item-img {
+		display: block;
+		width: 100%;
+		transition: opacity 150ms ease;
+		will-change: opacity;
+	}
+
+	&__item-subimg {
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 0;
+		z-index: -1;
+	}
+}
+
+@media screen and (max-width: @md) {
+	.browser {
+		&__control {
+			width: 24px;
+			height: 24px;
+		}
+
+		&__url {
+			width: 100%;
+			height: 24px;
+			margin: 0 15px;
+		}
+	}
+}
+
+@media screen and (max-width: @sm) {
+	.browser {
+		&__controls {
+			padding: 8px 6px;
+		}
+
+		&__control {
+			width: 16px;
+			height: 16px;
+		}
+
+		&__url {
+			width: 100%;
+			height: 16px;
+			margin: 0 10px;
+		}
+	}
+}

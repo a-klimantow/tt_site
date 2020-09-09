@@ -1,0 +1,234 @@
+@import "const";
+
+.evo {
+  &__title {
+    float: left;
+    width: 580px;
+    font-size: 60px;
+    line-height: 70px;
+    color: #272f5a;
+    margin-bottom: 60px;
+  }
+
+  &__image {
+    width: 580px;
+    float: right;
+  }
+
+  &__list {
+    width: 580px;
+    font-size: @font-sm;
+    line-height: 24px;
+    color: #272f5a;
+
+    li {
+      margin-bottom: 16px;
+      margin-left: 18px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        margin-right: 15px;
+        margin-left: -18px;
+        background-color: #189ee9;
+      }
+    }
+  }
+}
+
+.team {
+  margin-top: 112px;
+
+  &__title {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    color: #272f5a;
+  }
+
+  &__list {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.team-participant {
+  width: 30%;
+  height: auto;
+  border: 1px solid rgba(29, 38, 84, 0.15);
+  border-radius: 4px;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+  &__empty {
+    width: 30%;
+    min-height: 100px;
+    border: none;
+  }
+  &__photo {
+    width: 100%;
+    &-hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__name {
+    padding: 32px 32px;
+    font-family: PTRootUIWebBold, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: @font-lg;
+    line-height: 36px;
+    text-align: center;
+    color: #272f5a;
+  }
+
+  &__position {
+    padding: 8px 32px 0;
+    font-size: @font-sm;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(39, 47, 90, 0.65);
+  }
+
+  &__info {
+    padding: 24px 32px 48px;
+    font-size: @font-sm;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(39, 47, 90, 0.65);
+  }
+}
+
+.bottom-button {
+  text-align: center;
+}
+
+@media screen and (max-width: @lg) {
+  .evo {
+    &__title {
+      float: none;
+      width: auto;
+    }
+
+    &__image {
+      display: block;
+      width: 50%;
+      margin: 0 auto 60px;
+      float: none;
+    }
+
+    &__list {
+      width: auto;
+      font-size: @font-sm;
+    }
+  }
+}
+
+@media screen and (max-width: @md) {
+  .evo {
+    &__image {
+      width: 70%;
+    }
+  }
+
+  .team {
+    margin-top: 80px;
+  }
+
+  .team-participant {
+    width: 46%;
+  }
+}
+
+@media screen and (max-width: @sm) {
+  .evo {
+    &__title {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 32px;
+    }
+
+    &__image {
+      width: 100%;
+      margin: 0 auto 32px;
+    }
+  }
+
+  .team {
+    margin-top: 60px;
+
+    &__title {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    &__list {
+      margin-top: 32px;
+    }
+  }
+
+  .team-participant {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: @xs) {
+  .evo {
+    &__title {
+      font-size: @font-xl;
+      line-height: 40px;
+    }
+
+    &__list {
+      font-size: @font-xs;
+      line-height: 16px;
+    }
+  }
+
+  .team {
+    margin-top: 112px;
+
+    &__title {
+      font-size: @font-xl;
+      line-height: 40px;
+    }
+
+    &__list {
+      margin-top: 36px;
+    }
+  }
+
+  .team-participant {
+    height: 475px;
+    margin-bottom: 16px;
+
+    &__name {
+      padding: 24px 16px 0;
+      font-size: @font-sm;
+      line-height: 24px;
+    }
+
+    &__position {
+      padding: 0 16px;
+      font-size: @font-xs;
+      line-height: 16px;
+    }
+
+    &__info {
+      padding: 16px 16px 48px;
+      font-size: @font-xs;
+      line-height: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .team-participant {
+    height: 350px;
+  }
+}

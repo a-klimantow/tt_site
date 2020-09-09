@@ -1,0 +1,46 @@
+include includes/header
+include includes/footer
++header("История изменений системы", "versions-history")
+div.header
+	div.head-desktop
+		img.ie-svg-hack(src="/public/images/laptop.jpg")
+	div.head-mobile
+		img.ie-svg-hack(src="/public/images/laptop-mobile.jpg")
+	div.header__info
+		div.header__title История изменений <br />TT Management
+		div.header__text Мы ежедневно работаем над тем, чтобы сделать систему надежнее, удобнее и
+			|  функциональнее. Все изменения вы можете найти на этой странице.
+div.content
+	div.version
+		h2.version__title Версия 1.0.1
+			div.version__divider
+			span.version__actual Актуальная
+		div.version__date 16 января 2020 года
+		div.version__changes
+			div.version__features
+				h3.version__change-title Новое
+				ul.version__points
+					li Теперь можно самостоятельно добавлять сотрудников, дома и приборы в базу
+					li Добавили новые типы задач для контролеров и диспетчеров
+					li Добавили возможность внесения показаний приборов
+			div.version__fixes
+				h3.version__change-title Исправления
+				ul.version__points
+					li Улучшили интерфейс системы
+					li Исправили ошибку в обнаружении задач
+	div.version
+		h2.version__title Версия 1.0.0
+		div.version__date 10 декабря 2019 года
+		div.version__changes
+			div.version__features
+				h3.version__change-title Новое
+				ul.version__points
+					li Добавили новый тип задач для инженеров УК и сотрудников
+					li Добавили возможность комментировать этапы
+					li Подключились к приборам ВКТ-7
+			div.version__fixes
+				h3.version__change-title Исправления
+				ul.version__points
+					li Добавили иконку когда нет данных
+					li Исправили незначительные ошибки и баги
++footer("versions-history")

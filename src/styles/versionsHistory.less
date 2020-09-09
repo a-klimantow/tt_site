@@ -1,0 +1,110 @@
+@import "const";
+
+.version {
+	margin-bottom: 80px;
+
+	@media screen and (max-width: @sm) {
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		font-size: 60px;
+		line-height: 70px;
+		color: #272F5A;
+
+		@media screen and (max-width: @sm) {
+			font-size: @font-xl;
+			line-height: 40px;
+		}
+	}
+
+	&__divider {
+		@media screen and (min-width: @xs + 1) {
+			display: none;
+		}
+
+		@media screen and (max-width: @xs) {
+			display: block;
+		}
+	}
+
+	&__actual {
+		display: inline-block;
+		margin-top: 26px;
+		vertical-align: top;
+		margin-left: 24px;
+		padding: 4px 16px;
+		background-color: #79AFFF;
+		border-radius: 2px;
+		font-size: @font-xs;
+		line-height: 24px;
+		color: #fff;
+
+		@media screen and (max-width: @sm) {
+			font-size: 12px;
+			line-height: 16px;
+			margin-top: 8px;
+			margin-left: 8px;
+			padding: 4px 8px;
+		}
+
+		@media screen and (max-width: @xs) {
+			margin-left: 0;
+		}
+	}
+
+	&__date {
+		margin-top: 8px;
+		font-size: @font-sm;
+		line-height: 24px;
+		color: rgba(39, 47, 90, 0.65);
+	}
+
+	&__features, &__fixes {
+		display: inline-block;
+		width: 580px;
+		margin-top: 32px;
+		vertical-align: top;
+
+		@media screen and (max-width: @md) {
+			width: auto;
+		}
+
+		@media screen and (max-width: @sm) {
+			margin-top: 24px;
+		}
+	}
+
+	&__features {
+		margin-right: 40px;
+
+		@media screen and (max-width: @sm) {
+			margin-right: 0;
+		}
+	}
+
+	&__change-title {
+		font-family: PTRootUIWebBold, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: @font-lg;
+		line-height: 36px;
+		color: #272F5A;
+
+		@media screen and (max-width: @sm) {
+			font-size: @font-xs;
+			line-height: 16px;
+		}
+	}
+
+	&__points {
+		margin-top: 12px;
+		font-size: @font-sm;
+		line-height: 32px;
+		color: rgba(39, 47, 90, 0.65);
+
+		@media screen and (max-width: @sm) {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+}

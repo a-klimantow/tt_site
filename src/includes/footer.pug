@@ -1,0 +1,33 @@
+mixin footer(currentPage)
+	div.footer
+		div.footer__main
+			div.footer__title Мы можем рассказать вам подробнее
+			div.footer__sub-title о наших продуктах и идеях. Оставьте свои контакты и мы обязательно
+				|  вам перезвоним.
+			form.send-message(data-success-modal="message")
+				input.field-input.send-message__field(name="name" placeholder="Имя")
+				input.field-input.send-message__field(name="phone" placeholder="Телефон")
+				textarea.field-textarea.send-message__field(name="comment" placeholder="Комментарий")
+				input(type="hidden" name="title" value="Просьба рассказать подробнее о продуктах и идеях")
+				button.link-button_big.send-message__submit Отправить сообщение
+		div.footer-menu.footer__menu
+			div.footer-menu__links
+				a.footer-menu__link(href="/about.html") О компании
+				a.footer-menu__link(href="/versions-history.html") История изменений системы
+				a.footer-menu__link(href="/contacts.html") Контакты
+			div.footer-menu__logo
+				a.footer-menu__link.footer-menu__link-index(href="/")
+					svg.footer-menu__logo-image(
+						viewBox="0 0 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					)
+						path(
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M15.2 4.2a1.8 1.8 0 011.6 0L29.1 12c1.2.7 1.2 2.5 0 3.1l-12.3 6.8a1.8 1.8 0 01-1.6 0L3 15a1.7 1.7 0 010-3.1l12.2-7.7zm1 1.3h-.3l-2.7 1.7 7.6 4.5 2.5-1.7-7.2-4.5zM3.5 13.2l8.2-5.1 7.6 4.4-2.8 1.8 1.4.9 6.7-4.3 3.7 2.3c.1.1.1.4 0 .4l-8.2 4.6-8-4.4 2.7-1.7-1.4-1-6.7 4.3-3.2-1.8a.2.2 0 010-.4zm7.1 1.5l8 4.3-2.6 1.5H16l-7.6-4.3 2.4-1.5z"
+						)
+						path(d="M3 17.9l1-.7 1.4.9-1.8 1.1c-.1.1-.1.4 0 .4L16 26.5h.2l12.3-6.9c.1 0 .1-.3 0-.4l-1.8-1.1 1.5-.9 1 .7c1.2.7 1.2 2.5 0 3.1l-12.3 6.8a1.8 1.8 0 01-1.6 0L3 21a1.7 1.7 0 010-3.1z")
+					span TT Management
+	include modals
+	</body>
+	</html>

@@ -1,0 +1,36 @@
+include topMenuLinks
+mixin topMenu(currentPage)
+	div.top-menu
+		div.top-menu__logo
+			a.top-menu__link.top-menu__link-index(href="/")
+				svg.top-menu__logo-image(
+					viewBox="0 0 32 32"
+					xmlns="http://www.w3.org/2000/svg"
+				)
+					path(
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.2 4.2a1.8 1.8 0 011.6 0L29.1 12c1.2.7 1.2 2.5 0 3.1l-12.3 6.8a1.8 1.8 0 01-1.6 0L3 15a1.7 1.7 0 010-3.1l12.2-7.7zm1 1.3h-.3l-2.7 1.7 7.6 4.5 2.5-1.7-7.2-4.5zM3.5 13.2l8.2-5.1 7.6 4.4-2.8 1.8 1.4.9 6.7-4.3 3.7 2.3c.1.1.1.4 0 .4l-8.2 4.6-8-4.4 2.7-1.7-1.4-1-6.7 4.3-3.2-1.8a.2.2 0 010-.4zm7.1 1.5l8 4.3-2.6 1.5H16l-7.6-4.3 2.4-1.5z"
+					)
+					path(d="M3 17.9l1-.7 1.4.9-1.8 1.1c-.1.1-.1.4 0 .4L16 26.5h.2l12.3-6.9c.1 0 .1-.3 0-.4l-1.8-1.1 1.5-.9 1 .7c1.2.7 1.2 2.5 0 3.1l-12.3 6.8a1.8 1.8 0 01-1.6 0L3 21a1.7 1.7 0 010-3.1z")
+				span TT Management
+		div.top-menu__links
+			+topMenuLinks(currentPage)
+		div.top-menu__hamburger
+			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H3ZM2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12ZM2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z" />
+			</svg>
+	div.top-menu-mobile(style="display: none;")
+		div.top-menu-mobile__top
+			div.top-menu-mobile__closer
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M6.34317 4.92888C5.95265 4.53836 5.31948 4.53836 4.92896 4.92888C4.53844 5.3194 4.53844 5.95257 4.92896 6.34309L10.4751 11.8892L4.70732 17.657C4.3168 18.0475 4.3168 18.6806 4.70732 19.0712C5.09785 19.4617 5.73101 19.4617 6.12154 19.0712L11.8893 13.3034L17.6569 19.071C18.0474 19.4615 18.6806 19.4615 19.0711 19.071C19.4616 18.6805 19.4616 18.0473 19.0711 17.6568L13.3035 11.8892L18.8495 6.34324C19.24 5.95272 19.24 5.31955 18.8495 4.92903C18.4589 4.53851 17.8258 4.53851 17.4352 4.92903L11.8893 10.475L6.34317 4.92888Z" />
+				</svg>
+		div.top-menu-mobile__links
+			+topMenuLinks(currentPage)
+		div.top-menu-mobile__additional
+			a.link-button.top-menu-mobile__add-link.modal-opener(href="#" data-modal="demo-access")
+				|  Получить демо доступ к системе
+			a.link.top-menu-mobile__add-link.modal-opener(href="#" data-modal="get-pdf")
+				img.top-menu__logo-image(src="/public/images/download.svg" alt="Логотип сайта")
+				| Скачать pdf презентацию

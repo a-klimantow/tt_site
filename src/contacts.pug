@@ -1,0 +1,53 @@
+include includes/header
+include includes/footer
+include includes/headBack
+include includes/headMobile
++header("Контакты", "contacts")
+div.header
+	div.head-desktop
+		img.ie-svg-hack(src="/public/images/office.jpg")
+	div.head-mobile
+		img.ie-svg-hack(src="/public/images/office-mobile.jpg")
+	div.header__info
+		div.header__title Контактная информация
+		div.header__text Мы всегда рады общению с новыми интересными людьми. Поэтому вы всегда
+			|  можете посетить наш офис или написать сообщение на электронную почту.
+div.content
+	div.tabs
+		div.tabs__header
+			h2.tabs__title.tabs__title_active(data-tab=1) Нижнекамск
+			h2.tabs__title(data-tab=2) Иннополис
+			div.tabs__toggle
+		div.tabs__content
+			div.tabs__tab.tabs__tab_active(data-tab=1)
+				h3.contacts__title Телефон
+				div.contacts__content
+					a.link_blue(href="tel:+7555419111 ") +7 555 41 91 11 
+					|  (Александр Белов)
+				h3.contacts__title Электронная почта
+				div.contacts__content
+					a.link_blue(href="mailto:belovav@aonec.ru") belovav@aonec.ru
+				h3.contacts__title Адрес
+				div.contacts__content Россия, Республика Татарстан, Нижнекамск, просп. Шинников, 31А
+				div.map-toggler(data-map=1)
+					img.map-toggler__icon(src="/public/images/chevron.svg" alt="Иконка переключателя карты")
+					span.map-toggler__label Скрыть карту
+				div.map__marker#map-marker__nizhnekamsk
+				div.map#map__nizhnekamsk(data-map=1)
+				div.map#map_innopolis(data-map=2)
+			div.tabs__tab(data-tab=2)
+				h3.contacts__title Телефон
+				div.contacts__content
+					a.link_blue(href="tel:+79172784967") +7 917 278 49 67
+					|  (Павел Маслаков)
+				h3.contacts__title Электронная почта
+				div.contacts__content
+					a.link_blue(href="mailto:maslakovpi@aonec.ru") maslakovpi@aonec.ru
+				h3.contacts__title Адрес
+				div.contacts__content Россия, Республика Татарстан, Иннополис, Университетская
+					|  улица, 7, 6 этаж, офис 602
+				div.map-toggler#map-toggler__innopolis(data-map=2)
+					img.map-toggler__icon(src="/public/images/chevron.svg" alt="Иконка переключателя карты")
+					span.map-toggler__label Скрыть карту
+				div.map__marker#map-marker__innopolis
++footer("contacts")

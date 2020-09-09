@@ -1,0 +1,79 @@
+div.modal__overlay(data-modal-active="")
+	div.modal__wrapper
+		div.modal#modal-demo-access
+			div.modal__top
+				div.modal__top-close.modal-close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Заявка на демо доступ
+			form.modal__content(data-success-modal="demo-access")
+				input.field-input.modal__field(name="name" placeholder="Имя")
+				input.field-input.modal__field(type="email" name="email" placeholder="Электронная почта")
+				input(type="hidden" name="title" value="Заявка на демо доступ")
+				button.link-button_big.modal__submit Отправить заявку
+		div.modal#modal-vacancy
+			div.modal__top
+				div.modal__top-close.modal-close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Отправление вакансии
+			form.modal__content(data-success-modal="vacancy")
+				input.field-input.modal__field(name="name" placeholder="Имя")
+				input.field-input.modal__field(name="phone" placeholder="Телефон")
+				textarea.field-textarea.modal__field(name="comment" placeholder="Комментарий")
+				input(type="hidden" name="title" value="Заявка на вакансию")
+				button.link-button_big.modal__submit Отправить вакансию
+		div.modal#modal-get-pdf
+			div.modal__top
+				div.modal__top-close.modal-close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title.subtitle Получение pdf презентации
+			form.modal__content(data-success-modal="presentation")
+				input.field-input.modal__field(name="name" placeholder="Ваше имя")
+				input.field-input.modal__field(
+					type="email"
+					name="email"
+					placeholder="Электронная почта"
+				)
+				input(type="hidden" name="title" value="Запрос pdf презентации на почту")
+				button.link-button_big.modal__submit Получить презентацию
+		div.modal#modal-demo-access-success
+			div.modal__top
+				div.modal__top-close.modal__close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Ваша заявка принята!
+			div.modal__content
+				p.modal__text В ближайшее время наш менеджер отправит Вам на указанную электронную почту
+					|  логин и пароль для входа в систему
+				button.link-button_big.modal-close.modal__button Закрыть
+		div.modal#modal-presentation-success
+			div.modal__top
+				div.modal__top-close.modal__close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Презентация отправлена
+			div.modal__content
+				p.modal__text В ближайшее время наш менеджер отправит Вам на указанную электронную почту
+					|  подробную pdf презентацию продукта
+				button.link-button_big.modal-close.modal__button Закрыть
+		div.modal#modal-message-success
+			div.modal__top
+				div.modal__top-close.modal__close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Сообщение успешно отправлено
+			div.modal__content
+				p.modal__text Спасибо! Мы постараемся ответить на Ваше сообщение в самое ближайшее время
+				button.link-button_big.modal-close.modal__button Закрыть
+		div.modal#modal-vacancy-success
+			div.modal__top
+				div.modal__top-close.modal__close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Ваша заявка принята!
+			div.modal__content
+				p.modal__text Спасибо! Мы постараемся ответить на Ваше сообщение в самое ближайшее время
+				button.link-button_big.modal-close.modal__button Закрыть
+		div.modal#modal-error
+			div.modal__top
+				div.modal__top-close.modal__close
+					img.modal-close(src="/public/images/cross.svg", alt="Иконка закрытия модального окна")
+			h3.modal__title Произошла ошибка
+			div.modal__content
+				p.modal__text Нам не удалось отправить Ваш запрос, попробуйте отправить его ещё раз позднее.
+				button.link-button_big.modal-close.modal__button Закрыть

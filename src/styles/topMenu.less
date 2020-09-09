@@ -1,0 +1,165 @@
+@import "const";
+
+@link-padding: 24px;
+@link-small-padding: 16px;
+
+.top-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0 56px;
+	background: rgba(23, 31, 77, 0.8);
+	z-index: 5000;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	@media screen and (max-width: @lg) {
+		padding: 0;
+	}
+
+	&__logo {
+		float: left;
+	}
+
+	&__links {
+		float: right;
+
+		@media screen and (max-width: @lg) {
+			display: none;
+		}
+	}
+
+	&__hamburger {
+		float: right;
+		display: none;
+		width: @link-small-size;
+		height: @link-small-size;
+		padding: @link-padding @link-small-padding;
+		cursor: pointer;
+
+		& svg {
+			will-change: fill;
+			transition: fill 150ms ease;
+			fill: @link-white-color;
+
+			&:hover, &:focus {
+				fill: @link-white-hover-color
+			}
+		}
+
+		@media screen and (max-width: @lg) {
+			display: block;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: @link-padding;
+		line-height: @link-size;
+		font-size: @font-lg;
+		color: @link-white-color;
+		text-decoration: none;
+		transition: color 150ms ease;
+
+		svg {
+			will-change: fill;
+			transition: fill 150ms ease;
+			fill: @link-white-color;
+		}
+
+		@media screen and (max-width: @lg) {
+			display: block;
+			line-height: @link-small-size;
+			font-size: @font-sm;
+			text-align: right;
+			padding: 18px @link-small-padding;
+		}
+
+		&:hover, &:focus {
+			color: @link-white-hover-color;
+
+			svg {
+				fill: @link-white-hover-color;
+			}
+		}
+
+		&_active {
+			color: @link-white-hover-color;
+
+			svg {
+				fill: @link-white-hover-color;
+			}
+		}
+	}
+
+	&__link-index {
+		@media screen and (max-width: @lg) {
+			display: inline-block;
+			text-align: left;
+			padding: @link-padding @link-small-padding;
+		}
+	}
+
+	&__logo-image {
+		width: @link-size;
+		height: @link-size;
+		margin-right: 16px;
+		vertical-align: top;
+
+		@media screen and (max-width: @lg) {
+			width: @link-small-size;
+			height: @link-small-size;
+			margin-right: 8px;
+		}
+	}
+}
+
+.top-menu-mobile {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #171F4D;
+	z-index: 6000;
+
+	&__top:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	&__closer {
+		float: right;
+		padding: 24px 12px;
+
+		svg {
+			fill: @link-white-color;
+			will-change: fill;
+			transition: fill 150ms ease;
+
+			&:hover, &:focus {
+				fill: @link-white-hover-color;
+			}
+
+			&_active {
+				fill: @link-white-hover-color;
+			}
+		}
+	}
+
+	&__additional {
+		margin-top: 60px;
+		padding: 16px;
+	}
+
+	&__add-link {
+		display: block!important;
+		margin-bottom: 16px;
+	}
+}

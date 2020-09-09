@@ -1,0 +1,101 @@
+@import "const";
+
+.contacts {
+	&__title {
+		margin-top: 32px;
+		font-family: PTRootUIWebBold, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: @font-lg;
+		line-height: 36px;
+		color: #272F5A;
+	}
+
+	&__content {
+		margin-top: 16px;
+		font-size: @font-sm;
+		line-height: 24px;
+		color: rgba(39, 47, 90, 0.65);
+	}
+}
+
+.map {
+	height: 600px;
+	margin-top: 8px;
+
+	&_closed {
+		display: none;
+	}
+
+	&__marker {
+		width: 48px;
+		height: 56px;
+		background-size: cover;
+	}
+}
+
+#map-marker__nizhnekamsk {
+	background: url("/public/images/map-icon-nizhnekamsk.png") no-repeat center;
+}
+
+#map-marker__innopolis {
+	background: url("/public/images/map-icon-innopolis.png") no-repeat center;
+}
+
+.map-toggler, .map-toggler_inactive {
+	margin-top: 24px;
+	font-family: PTRootUIWebBold, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: @font-sm;
+	line-height: 32px;
+	color: #189EE9;
+	cursor: pointer;
+}
+
+.map-toggler__label {
+	margin-left: 8px;
+}
+
+.map-toggler__icon {
+	width: 16px;
+	height: 16px;
+}
+
+.map-toggler_inactive .map-toggler__icon {
+	width: 16px;
+	height: 16px;
+	transform: rotate(180deg);
+}
+
+@media screen and (max-width: @md) {
+	.contacts {
+		&__title {
+			font-size: @font-md;
+			line-height: 32px;
+		}
+	}
+}
+
+@media screen and (max-width: @sm) {
+	.contacts {
+		&__title {
+			margin-top: 24px;
+			font-size: @font-sm;
+			line-height: 24px;
+		}
+
+		&__content {
+			margin-top: 8px;
+			font-size: @font-xs;
+			line-height: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: @xs) {
+	.contacts {
+		&__title {
+			font-size: @font-sm;
+			line-height: 16px;
+		}
+	}
+}

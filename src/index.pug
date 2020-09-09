@@ -1,0 +1,199 @@
+include includes/header
+include includes/footer
+include includes/headMobile
++header("Главная", "/", "index")
+div.main-header
+	img.main-header__main-image#idx-head-img-main(src="/public/images/index-head-back.svg" alt="Фон шапки")
+	img.main-header__sub-image#idx-head-img-electric(
+		src="/public/images/index-img-electric.svg"
+		alt="Дом с электричеством в шапке"
+	)
+	img.main-header__sub-image#idx-head-img-water(
+		src="/public/images/index-img-water.svg"
+		alt="Дом с водой в шапке"
+	)
+	img.main-header__sub-image#idx-head-img-trifle(
+		src="/public/images/index-img-trifle.svg"
+		alt="Управляющий дом в шапке"
+	)
+	img.main-header__sub-image#idx-head-img-heat(
+		src="/public/images/index-img-heat.svg"
+		alt="Дом с отоплением в шапке"
+	)
+	div.main-header__back
+		img.main-header__hidden-img#idx-head-img-hidden(
+			src="/public/images/index-header-back.png"
+			usemap="#head-image-map"
+			alt="Скрытый фон шапки"
+		)
+		map#idx-head-img-hidden-map(name="head-image-map")
+			area.main-header__head-area(
+				shape="poly"
+				href="#"
+				id="house-electric"
+				coords="693,423,527,520,527,701,640,766,690,734,737,759,739,722,792,698,849,730,851,660,909,629,920,639,917,556"
+			)
+			area.main-header__head-area(
+				shape="poly"
+				href="#"
+				id="house-water"
+				coords="906,632,847,664,847,729,790,697,736,724,736,985,960,1117,1127,1020,1127,761"
+			)
+			area.main-header__head-area(
+				shape="poly"
+				href="#"
+				id="house-trifle"
+				coords="1046,412,926,484,925,549,1089,640,1252,546,1251,483,1168,432,1126,455"
+			)
+			area.main-header__head-area(
+				shape="poly"
+				href="#"
+				id="house-heat"
+				coords="1497,336,1454,356,1422,338,1277,423,1277,597,1379,655,1407,639,1492,689,1493,721,1596,781,1739,695,1737,521,1641,463,1609,478,1608,402"
+			)
+
+	div.head-mobile
+		img.ie-svg-hack(src="/public/images/index-back-mobile.png")
+	div.main-header__content
+		div.main-header__content-inner
+			h1.main-header__title TT Management — лучший инструмент
+			p.main-header__subtitle для снижения затрат на коммунальные ресурсы и обслуживание
+				|  инженерных сетей в управляющих компаниях
+			div.main-header__controls
+				a.link-button.main-header__demo.modal-opener(href="#" data-modal="demo-access")
+					| Получить демо доступ к системе
+				a.link.main-header__download.modal-opener(href="#" data-modal="get-pdf")
+					img.top-menu__logo-image(src="/public/images/download.svg" alt="Иконка загрузки")
+					| Скачать pdf презентацию
+div.main-mid-back
+div.main-mid-back-mobile
+	img.main-mid-back-mobile__image(src="/public/images/index-mid-back-mobile.svg")
+div.content
+	div.main-problems
+		h2.subtitle Решаем проблемы в сфере ЖКХ
+		div.main-problems__list
+			div.main-problems__solve
+				img.main-problems__image(
+					src="/public/images/problem-incorrect-device.svg"
+					alt="Иллюстрация к решению проблемы выявления некорректно работающих систем коммерческого учёта"
+				)
+				h3.main-problems__title Выявляем некорректно работающие системы коммерческого учета
+				p.main-problems__text За счет точной настройки параметров приборов мы в кратчайшие
+					|  сроки определяем неполадки и сообщаем о них
+			div.main-problems__solve
+				img.main-problems__image(
+					src="/public/images/problem-incorrect-data.svg"
+					alt="Иллюстрация к решению проблемы выявления ошибочно переданных данных от абонентов"
+				)
+				h3.main-problems__title Сообщаем об ошибочно переданных показаниях от абонентов
+				p.main-problems__text Анализируем полученные данные потребления и предупреждаем,
+					|  если показания вызывают подозрения
+			div.main-problems__solve
+				img.main-problems__image(
+					src="/public/images/problem-damages.svg"
+					alt="Иллюстрация к решению проблемы определения утечек и несанкционированных подключений"
+				)
+				h3.main-problems__title Определяем утечки и несанкционированные подключения
+				p.main-problems__text Задача о проверке инженерных сетей автоматически придет
+					|  исполнителю в личный кабинет
+			div.main-problems__solve
+				img.main-problems__image(
+					src="/public/images/problem-crash.svg"
+					alt="Иллюстрация к решению проблемы прогнозирования аварийных ситуаций"
+				)
+				h3.main-problems__title Позволяем прогнозировать аварийные ситуации
+				p.main-problems__text Система заранее предупредит о дате окончания срока
+					|  эксплуатации приборов
+	div.main-advantages
+		h2.subtitle Преимущества TT Management
+		div.main-advantages__list
+			div.main-advantages__advantage
+				img.main-advantages__image(
+					src="/public/images/advantage-auto.svg"
+					alt="Иллюстрация к преимуществу автоматической работе с данными"
+				)
+				h3.main-advantages__title Автоматический сбор и обработка данных
+			div.main-advantages__advantage
+				img.main-advantages__image(
+					src="/public/images/advantage-analytics.svg"
+					alt="Иллюстрация к преимуществу возможнонсти аналитики"
+				)
+				h3.main-advantages__title Интерпретация информации и формирование аналитических
+					|  выводов
+			div.main-advantages__advantage
+				img.main-advantages__image(
+					src="/public/images/advantage-control.svg"
+					alt="Иллюстрация к преимуществу возможнонсти создания заданий и контроля их выполнения"
+				)
+				h3.main-advantages__title Превращение выводов в конкретные задания и доведение их до
+					|  исполнителей с контролем выполнения
+	div.main-convenience
+		h2.subtitle_white Оцените удобство системы
+		div.main-convenience__content
+			div.main-convenience__browser-wrapper
+				//- div.main-convenience__prev(data-browser-direction="prev")
+				div.browser.main-convenience__browser
+					div.browser__controls
+						img.browser__control#browser__control_bwd(
+							src="/public/images/browser-control-bwd.svg"
+							alt="Кнока назад мини-браузера"
+							data-browser-direction="prev"
+						)
+						img.browser__control#browser__control_fwd(
+							src="/public/images/browser-control-fwd.svg"
+							alt="Кнока вперёд мини-браузера"
+							data-browser-direction="next"
+						)
+						img.browser__control#browser__control_rld(
+							src="/public/images/browser-control-rld.svg"
+							alt="Кнока перезагрузки мини-браузера"
+						)
+						div.browser__control.browser__url
+						img.browser__control#browser__control_mnu(
+							src="/public/images/browser-control-mnu.svg"
+							alt="Кнока меню мини-браузера"
+						)
+					div.browser__content(data-items-count="5")
+						div.browser__item.browser__item_active#convenience-employee(data-index="1")
+							video(src="/public/video/demo.mp4" controls)
+							//- img.browser__item-img(src="/public/images/convenience-employee.jpg")
+							//- img.browser__item-subimg(src="/public/images/convenience-employee-blur.jpg")
+				//- 		div.browser__item#convenience-admin(data-index="2")
+				//- 			img.browser__item-img(src="/public/images/convenience-admin.jpg")
+				//- 			img.browser__item-subimg(src="/public/images/convenience-admin-blur.jpg")
+				//- 		div.browser__item#convenience-data(data-index="3")
+				//- 			img.browser__item-img(src="/public/images/convenience-data.jpg")
+				//- 			img.browser__item-subimg(src="/public/images/convenience-data-blur.jpg")
+				//- 		div.browser__item#convenience-subscriber(data-index="4")
+				//- 			img.browser__item-img(src="/public/images/convenience-subscriber.jpg")
+				//- 			img.browser__item-subimg(src="/public/images/convenience-subscriber-blur.jpg")
+				//- 		div.browser__item#convenience-all-data(data-index="5")
+				//- 			img.browser__item-img(src="/public/images/convenience-all-data.jpg")
+				//- 			img.browser__item-subimg(src="/public/images/convenience-all-data-blur.jpg")
+				//- div.main-convenience__next(data-browser-direction="next")
+		div.main-convenience__get-demo
+			a.link-button.modal-opener(href="#" data-modal="demo-access") Получить демо доступ к системе
+	div.main-about
+		h2.subtitle.main-about__title О компании
+		img.main-about__image(src="/public/images/about_company.png" alt="Иллюстрация")
+		p.main-about__text АО «Национальная инжиниринговая компания» — один из крупнейших в
+			|  Республике Татарстан инженерных центров со специализацией в секторе ЖКХ. Мы помогаем
+			|  повышать эффективность работы коммунальной инфраструктуры при помощи новейших
+			|  цифровых сервисов, разрабатываемых нашим собственным IT подразделением Transparent
+			|  Technology.
+			a.link.link_blue.main-about__link(href="/about.html")
+				img(src="/public/images/arrow-right.svg" alt="Логотип сайта")
+				| Подробнее о компании
+		div.main-about__clear
+	div.main-get-pdf
+		h2.subtitle.main-get-pdf Получить pdf презентацию на почту
+		form.main-get-pdf__form(data-success-modal="presentation")
+			input.field-input.field-input_blue.main-get-pdf__field-name(name="name" placeholder="Ваше имя")
+			input.field-input.field-input_blue.main-get-pdf__field-email(
+				type="email"
+				name="email"
+				placeholder="Электронная почта"
+			)
+			input(type="hidden" name="title" value="Запрос pdf презентации на почту")
+			button.link-button_big.main-get-pdf__submit Получить презентацию
++footer("/")

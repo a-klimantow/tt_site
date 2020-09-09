@@ -1,0 +1,113 @@
+@import "const";
+
+.header {
+	&__info {
+		position: absolute;
+		top: 272px;
+		left: 50%;
+		max-width: 600px;
+
+		@media screen and (max-width: 1500px) {
+			top: 180px;
+		}
+
+		@media screen and (max-width: @lg) {
+			top: 80px;
+			left: 24px;
+		}
+
+		@media screen and (max-width: @md) {
+			max-width: 100%;
+			left: 0;
+			padding: 0 24px;
+		}
+
+		@media screen and (max-width: @sm) {
+			top: 256px;
+		}
+
+		@media screen and (max-width: @xs) {
+			top: 128px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		font-size: 48px;
+		line-height: 72px;
+		color: #FFFFFF;
+
+		@media screen and (max-width: @lg) {
+			margin-bottom: 16px;
+			font-size: @font-xl;
+			line-height: 40px;
+		}
+
+		img {
+			@media screen and (max-width: @xs) {
+				width: 112px;
+			}
+
+			&:first-child {
+				margin-right: 32px;
+			}
+		}
+	}
+
+	&__text {
+		font-size: @font-md;
+		line-height: 32px;
+		color: #CFD5F3;
+
+		@media screen and (max-width: @lg) {
+			font-size: @font-sm;
+			line-height: 24px;
+		}
+
+		@media screen and (max-width: @sm) {
+			font-size: @font-xs;
+			line-height: 24px;
+		}
+	}
+}
+
+.head-desktop {
+	display: block;
+	width: 100%;
+
+	svg {
+		min-width: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.ie-svg-hack {
+	width: 100%;
+}
+
+.head-mobile {
+	display: none;
+}
+
+@media screen and (min-width: @sm + 1) and (max-width: @md) {
+	.head-desktop {
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+
+		.ie-svg-hack {
+			min-width: @md;
+		}
+	}
+}
+
+@media screen and (max-width: @sm) {
+	.head-desktop {
+		display: none;
+	}
+	.head-mobile {
+		display: block;
+	}
+}

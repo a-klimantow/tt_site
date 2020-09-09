@@ -1,0 +1,92 @@
+@import "const";
+
+.tabs {
+	&__header {
+		position: static;
+	}
+
+	&__title {
+		display: inline-block;
+		margin-right: 32px;
+		font-size: 60px;
+		line-height: 70px;
+		user-select: none;
+		color: #189EE9;
+		cursor: pointer;
+
+		&_active {
+			border-bottom: 2px solid #189EE9;
+			color: #272F5A;
+		}
+	}
+
+	&__tab {
+		display: none;
+
+		&_active {
+			display: block!important;
+		}
+	}
+
+	&__toggle {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 12rem;
+		width: 40px;
+		height: 40px;
+		background: url("/public/images/chevron.svg") no-repeat center;
+		transform: rotate(180deg);
+	}
+
+	&__content {
+		margin-top: 16px;
+	}
+}
+
+@media screen and (max-width: @lg) {
+	.tabs {
+		&__title, &__title_active {
+			font-size: 48px;
+			line-height: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: @md) {
+	.tabs {
+		&__title, &__title_active {
+			margin-right: 24px;
+			font-size: 36px;
+			line-height: 48px;
+		}
+	}
+}
+
+@media screen and (max-width: @sm) {
+	.tabs {
+		&__header {
+			position: relative;
+		}
+
+		&__title {
+			display: none;
+			margin-right: 16px;
+			font-size: @font-xl;
+			line-height: 40px;
+			border-bottom: none;
+
+			&_active, &_opened {
+				display: block;
+			}
+		}
+
+		&__toggle {
+			display: block;
+		}
+
+		&__content {
+			margin-top: 24px;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+/* Font PT Root UI: Copyright ? ParaType, 2018. All rights reserved.*/
+
+@font-face {
+    font-family: 'PTRootUIWebLight';
+    src: url('/public/fonts/PT Root UI_Light/PT Root UI_Light.eot');
+    src: url('/public/fonts/PT Root UI_Light/PT Root UI_Light.eot?#iefix') format('embedded-opentype'),
+    url('/public/fonts/PT Root UI_Light/PT Root UI_Light.woff2') format('woff2'),
+    url('/public/fonts/PT Root UI_Light/PT Root UI_Light.woff') format('woff'),
+    url('/public/fonts/PT Root UI_Light/PT Root UI_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTRootUIWebRegular';
+    src: url('/public/fonts/PT Root UI_Regular/PT Root UI_Regular.eot');
+    src: url('/public/fonts/PT Root UI_Regular/PT Root UI_Regular.eot?#iefix') format('embedded-opentype'),
+    url('/public/fonts/PT Root UI_Regular/PT Root UI_Regular.woff2') format('woff2'),
+    url('/public/fonts/PT Root UI_Regular/PT Root UI_Regular.woff') format('woff'),
+    url('/public/fonts/PT Root UI_Regular/PT Root UI_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTRootUIWebMedium';
+    src: url('/public/fonts/PT Root UI_Medium/PT Root UI_Medium.eot');
+    src: url('/public/fonts/PT Root UI_Medium/PT Root UI_Medium.eot?#iefix') format('embedded-opentype'),
+    url('/public/fonts/PT Root UI_Medium/PT Root UI_Medium.woff2') format('woff2'),
+    url('/public/fonts/PT Root UI_Medium/PT Root UI_Medium.woff') format('woff'),
+    url('/public/fonts/PT Root UI_Medium/PT Root UI_Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PTRootUIWebBold";
+    src: url("/public/fonts/PT Root UI_Bold/PT Root UI_Bold.eot");
+    src: url("/public/fonts/PT Root UI_Bold/PT Root UI_Bold.eot?#iefix") format("embedded-opentype"),
+    url("/public/fonts/PT Root UI_Bold/PT Root UI_Bold.woff2") format("woff2"),
+    url("/public/fonts/PT Root UI_Bold/PT Root UI_Bold.woff") format("woff"),
+    url("/public/fonts/PT Root UI_Bold/PT Root UI_Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,74 @@
+include includes/header
+include includes/footer
++header("О компании", "about")
+div.header
+	div.head-desktop
+		img.ie-svg-hack(src="/public/images/bagel.jpg")
+	div.head-mobile
+		img.ie-svg-hack(src="/public/images/bagel-mobile.jpg")
+	div.header__info
+		div.header__title
+			img(src="/public/images/ec.svg" alt="Логотип компании Engineering Centre")
+			img(src="/public/images/tt.svg" alt="Логотип компании Transparent Technology")
+		div.header__text «Национальная инжиниринговая компания», как один из самых крупных в
+			|  Республике Татарстан инжиниринговых центров, имеет свой собственный филиал в особой
+			|  экономической зоне Иннополиса. Основная задача, которая ставилась перед Transparent
+			|  Technology — разработка современных сервисов для ЖКХ с использованием передовых
+			|  технологий и инструментов.
+div.content
+	div.evo
+		div.evo__title Мы знаем, как будет развиваться город будущего
+		img.evo__image(src="/public/images/about_evo.png" alt="Иллюстрация")
+		ul.evo__list
+			li Аналитика и прогнозирование на основе больших данных станут основой развития
+				|  территориального планирования
+			li Минимизация потребления ресурсов — единственно возможный способ существования
+				|  человечества
+			li Цифровые ЖКХ сервисы станут основой экономики управляющих компаний
+	div.team
+		div.team__title Наша команда
+		div.team__list
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/belov.jpg" alt="Фото Александра Белова")
+				h2.team-participant__name Александр Белов
+				h3.team-participant__position Начальник коммерческого отдела
+				p.team-participant__info 
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/busov.jpg" alt="Фото Дениса Бусова")
+				h2.team-participant__name Денис Бусов
+				h3.team-participant__position Начальник теплотехнического отдела
+				p.team-participant__info
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/fanis.jpg" alt="Фото Фаниса Абуляесова")
+				h2.team-participant__name Фанис Абуляесов
+				h3.team-participant__position Начальник электротехнического отдела
+				p.team-participant__info
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/buntova.jpg" alt="Фото Бунтовой Ольги")
+				h2.team-participant__name Бунтова Ольга
+				h3.team-participant__position Аналитик
+				p.team-participant__info
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/halsov.jpg" alt="Фото Хальзова Евгения")
+				h2.team-participant__name Хальзов Евгений
+				h3.team-participant__position Backend-разработчик
+				p.team-participant__info 
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/simonov.jpg" alt="Фото Симонова Дениса")
+				h2.team-participant__name Симонов Денис
+				h3.team-participant__position Scada разработчик
+				p.team-participant__info 
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/klimantow.jpg" alt="Фото Климантова Антона")
+				h2.team-participant__name Климантов Антон
+				h3.team-participant__position Frontend - разработчик
+				p.team-participant__info 
+			div.team-participant
+				img.team-participant__photo(src="/public/images/team/solodovnikov.jpg" alt="Фото Солодовникова Павла")
+				h2.team-participant__name Солодовников Павел
+				h3.team-participant__position Дизайнер
+				p.team-participant__info 
+			div.team-participant__empty
+	div.bottom-button
+		a.link-button.modal-opener(href="#" data-modal="vacancy") Присоединиться к команде
++footer("about")

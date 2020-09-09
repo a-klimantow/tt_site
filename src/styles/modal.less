@@ -1,0 +1,103 @@
+@import "const";
+
+.modal {
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin: 40px auto 80px;
+	padding: 16px 16px 60px;
+	background-color: #fff;
+	box-sizing: border-box;
+	opacity: 0;
+	transition: opacity .3s ease, margin-top .3s ease;
+	will-change: opacity, margin-top;
+
+	&__overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10000;
+		overflow: auto;
+		background-color: rgba(30,45,110,0.8);
+		opacity: 0;
+		transition: opacity .3s ease;
+		will-change: opacity;
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 600px;
+		margin: auto;
+	}
+
+	&__top {
+		text-align: right;
+	}
+
+	&__top-close {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		cursor: pointer;
+
+		img {
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&__title {
+		font-size: @font-xl;
+		line-height: 48px;
+		text-align: center;
+		color: #272F5A;
+		margin: 0 16px 32px;
+	}
+
+	&__content {
+		margin: 0 16px;
+	}
+
+	&__text {
+		margin: 0 16px;
+		font-size: @font-sm;
+		line-height: 24px;
+		text-align: center;
+		color: rgba(39, 47, 90, 0.65);
+	}
+
+	&__field {
+		margin-bottom: 16px;
+	}
+
+	&__submit, &__button {
+		display: block;
+		width: 100%;
+		margin-top: 16px;
+	}
+
+	&__button {
+		margin-top: 32px;
+	}
+}
+
+@media screen and (max-width: @md) {
+	.modal {
+		&__wrapper {
+			width: auto;
+			margin: 0 24px;
+		}
+	}
+}
+
+@media screen and (max-width: @sm) {
+	.modal {
+		&__title {
+			font-size: @font-lg;
+			line-height: 32px;
+		}
+	}
+}
